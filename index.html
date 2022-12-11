@@ -16,16 +16,22 @@
     
 
 <main>
-    <h1>November 15th, 2022</h1>
+    <h1>APOD</h1>
 
+    <form id="apod-form">
+        <label for="date">Select a date</label>
+        <input type="date" name="date" id="apod-date">
+        <button type="submit" id="apod-get-button">Get Picture</button>
+    </form>
 
-    <img src="images/nov15.jpg" id="nov15">
-
-    <div class="add">
-    <a href="fav.html">
-    <button type="button">Add to Favorites</button>
-    </a>
+    <div class="apod-image" id="apod-image">
+        
     </div>
+
+
+    <ul class="favourites" id="favourites">
+        
+    </ul>
 
     
     
@@ -33,6 +39,8 @@
 <footer>
     <p> copyright</p>
 </footer>  
+
+<script src="script.js"></script>
 </body>
 
 </html>

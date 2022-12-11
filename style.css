@@ -72,6 +72,29 @@ footer{
     background-color: rgb(9, 6, 27); 
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-img {
+    max-width: 80%;
+}
+
 /************************************************
               FAVORITES PAGE
 *************************************************/

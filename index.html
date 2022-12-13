@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Capstone Part 4</title>
 </head>
 <body>
-    <nav id="nav">
-        <a href="index.html">Home</a>
-        <a href="request.html">Request</a>
-        <a href="fav.html">Favorites</a>
-    </nav>
+    <main>
+        <h1>NASA APOD</h1>
     
-
-<main>
-    <h1>November 15th, 2022</h1>
-
-
-    <img src="images/nov15.jpg" id="nov15">
-
-    <div class="add">
-    <a href="fav.html">
-    <button type="button">Add to Favorites</button>
-    </a>
-    </div>
-
+        <form id="apod-form" class="apod-form">
+            <div class="apod-formdiv">
+                <label for="date">Select a date</label>
+                <input type="date" name="date" id="apod-date">
+            </div>
+            <button type="submit" id="apod-get-button">Get Picture</button>
+        </form>
+    
+        <div class="apod-image" id="apod-image">
+            
+        </div>
     
     
-</main>
-<footer>
-    <p> copyright</p>
-</footer>  
+        <ul class="favourites" id="favourites">
+            
+        </ul>
+    
+        
+        
+    </main>
+    
+    
+    <script src="script.js"></script>
 </body>
 
 </html>

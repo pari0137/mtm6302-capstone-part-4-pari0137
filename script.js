@@ -18,12 +18,14 @@ async function populate (e) {
     let data = await response.json()
 
     $apodImage.innerHTML = `
-        <img src="${data.url}" id="apod-img">
-        <div>
+        <div class="apod-img-container">
+            <img src="${data.url}" class="apod-img" id="apod-img">
+        </div>
+        <div class="apod-details">
             <h3>${data.title}</h3>
             <p>${data.date}</p>
             <p>${data.explanation}</p>
-            <button type="button" id="fav-button">Add to Favorites</button>
+            <button type="button" class="fav-button" id="fav-button">Add to Favorites</button>
         </div>
         <div class="modal" id="modal">
             <img src="${data.hdurl}" alt="${data.title}" class="modal-img" id="modal-img">
@@ -75,10 +77,11 @@ function addToFavourites () {
         favHtml.push(`
             <li class="fav-item">
                 <img src="${favArray[i].url}" id="apod-img">
-                <div>
+                <div class="fav-details">
                     <h3>${favArray[i].title}</h3>
-                    <p>${favArray[i].date}</p>
-                    <button type="button" id="delete-button" data-id="${i}">Delete</button>
+                    <p id="date-fav">${favArray[i].date}</p>
+                    <p>${favArray[i].explanation}</p>
+                    <button type="button" class="delete-button" id="delete-button" data-id="${i}">Delete</button>
                 </div>
             </li>
         `)
@@ -125,12 +128,14 @@ if (lsData) {
     data = JSON.parse(lsData)
 
     $apodImage.innerHTML = `
-        <img src="${data.url}" id="apod-img">
-        <div>
+        <div class="apod-img-container">
+            <img src="${data.url}" class="apod-img" id="apod-img">
+        </div>
+        <div class="apod-details">
             <h3>${data.title}</h3>
-            <p>${data.date}</p>
+            <p id="data-date">${data.date}</p>
             <p>${data.explanation}</p>
-            <button type="button" id="fav-button">Add to Favorites</button>
+            <button type="button" class="fav-button" id="fav-button">Add to Favorites</button>
         </div>
         <div class="modal" id="modal">
             <img src="${data.hdurl}" alt="${data.title}" class="modal-img" id="modal-img">
